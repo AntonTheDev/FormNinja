@@ -17,16 +17,16 @@ func ~= (input: String, pattern: String?) -> Bool {
 
 class Regex {
     
-    let internalExpression: NSRegularExpression
+    let expression: NSRegularExpression
     let pattern: String
     
     init(_ pattern: String) {
         self.pattern = pattern
-        self.internalExpression = try! NSRegularExpression(pattern: pattern,  options: [.CaseInsensitive])
+        self.expression = try! NSRegularExpression(pattern: pattern,  options: [.CaseInsensitive])
     }
     
     func validate(input: String) -> Bool {
-        return self.internalExpression.firstMatchInString(input, options:[], range: NSMakeRange(0, input.characters.count)) != nil
+        return self.expression.firstMatchInString(input, options:[], range: NSMakeRange(0, input.characters.count)) != nil
     }
 }
 

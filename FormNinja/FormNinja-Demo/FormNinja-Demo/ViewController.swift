@@ -12,14 +12,46 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setupInterface()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        layoutInterface()
+    }
+    
+    func setupInterface() {
+        view.addSubview(formView)
+    }
+    
+    func layoutInterface() {
+        formView.frame = view.bounds
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: Lazy loaded views
+    
+    lazy var formView : FormView = {
+        [unowned self] in
+        var form : FormView = FormView(frame: CGRectZero)
+        form.dataSource = self
+        form.backgroundColor = UIColor.lightGrayColor()
+        return form
+    }()
+}
+
+extension ViewController : FormViewDataSource {
+    
+    func fieldTypesFormView(formView: FormView) -> [FieldType] {
+        return [.firstName, .middleInitial, .lastName]
     }
-
-
+    
+    func formView(formView: FormView, sizeForForFieldType type : FieldType) -> CGSize {
+        switch type {
+        case .lastName:
+            return CGSizeMake(formView.bounds.width, 60)
+        default:
+            return CGSizeMake(formView.bounds.width / 2.0, 60)
+        }
+    }
 }
 

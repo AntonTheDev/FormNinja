@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3A3B62761D5AE6DC00B0E0E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62751D5AE6DC00B0E0E4 /* AppDelegate.swift */; };
 		3A3B62781D5AE6DC00B0E0E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62771D5AE6DC00B0E0E4 /* ViewController.swift */; };
-		3A3B627B1D5AE6DC00B0E0E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B62791D5AE6DC00B0E0E4 /* Main.storyboard */; };
 		3A3B627D1D5AE6DC00B0E0E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B627C1D5AE6DC00B0E0E4 /* Assets.xcassets */; };
 		3A3B62801D5AE6DC00B0E0E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B627E1D5AE6DC00B0E0E4 /* LaunchScreen.storyboard */; };
 		3A3B62A31D5AE78200B0E0E4 /* FormNinja_ValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62A21D5AE78200B0E0E4 /* FormNinja_ValidationTests.swift */; };
@@ -17,6 +16,9 @@
 		3A3B62B61D5AE7CC00B0E0E4 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62B41D5AE7CC00B0E0E4 /* Validator.swift */; };
 		3A3B62B81D5AE81B00B0E0E4 /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62B71D5AE81B00B0E0E4 /* FieldType.swift */; };
 		3A3B62B91D5AE81B00B0E0E4 /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62B71D5AE81B00B0E0E4 /* FieldType.swift */; };
+		3A3B62D01D5AFD9200B0E0E4 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62CF1D5AFD9200B0E0E4 /* FormView.swift */; };
+		3A3B62D21D5AFE4C00B0E0E4 /* FormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62D11D5AFE4C00B0E0E4 /* FormFieldCell.swift */; };
+		3A3B62D41D5B033C00B0E0E4 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62D31D5B033C00B0E0E4 /* FormTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +35,6 @@
 		3A3B62721D5AE6DC00B0E0E4 /* FormNinja-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FormNinja-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A3B62751D5AE6DC00B0E0E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A3B62771D5AE6DC00B0E0E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3A3B627A1D5AE6DC00B0E0E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A3B627C1D5AE6DC00B0E0E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A3B627F1D5AE6DC00B0E0E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A3B62811D5AE6DC00B0E0E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +43,9 @@
 		3A3B62A41D5AE78200B0E0E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A3B62B41D5AE7CC00B0E0E4 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		3A3B62B71D5AE81B00B0E0E4 /* FieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldType.swift; sourceTree = "<group>"; };
+		3A3B62CF1D5AFD9200B0E0E4 /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormView.swift; path = Validator/FormView.swift; sourceTree = "<group>"; };
+		3A3B62D11D5AFE4C00B0E0E4 /* FormFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormFieldCell.swift; path = Validator/FormFieldCell.swift; sourceTree = "<group>"; };
+		3A3B62D31D5B033C00B0E0E4 /* FormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormTextField.swift; path = ../../TestProjects/VenmoDemo/VenmoDemo/UI/CardEntry/Views/FormTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +90,7 @@
 			children = (
 				3A3B62751D5AE6DC00B0E0E4 /* AppDelegate.swift */,
 				3A3B62771D5AE6DC00B0E0E4 /* ViewController.swift */,
-				3A3B62791D5AE6DC00B0E0E4 /* Main.storyboard */,
-				3A3B627C1D5AE6DC00B0E0E4 /* Assets.xcassets */,
-				3A3B627E1D5AE6DC00B0E0E4 /* LaunchScreen.storyboard */,
-				3A3B62811D5AE6DC00B0E0E4 /* Info.plist */,
+				3A3B62D51D5B04E800B0E0E4 /* Supporting Files */,
 			);
 			path = "FormNinja-Demo";
 			sourceTree = "<group>";
@@ -106,6 +107,8 @@
 		3A3B62B21D5AE7CC00B0E0E4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3A3B62CF1D5AFD9200B0E0E4 /* FormView.swift */,
+				3A3B62D61D5B05B000B0E0E4 /* Views */,
 				3A3B62B31D5AE7CC00B0E0E4 /* Validator */,
 			);
 			name = Source;
@@ -119,6 +122,25 @@
 				3A3B62B71D5AE81B00B0E0E4 /* FieldType.swift */,
 			);
 			path = Validator;
+			sourceTree = "<group>";
+		};
+		3A3B62D51D5B04E800B0E0E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A3B627C1D5AE6DC00B0E0E4 /* Assets.xcassets */,
+				3A3B627E1D5AE6DC00B0E0E4 /* LaunchScreen.storyboard */,
+				3A3B62811D5AE6DC00B0E0E4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A3B62D61D5B05B000B0E0E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A3B62D11D5AFE4C00B0E0E4 /* FormFieldCell.swift */,
+				3A3B62D31D5B033C00B0E0E4 /* FormTextField.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,7 +226,6 @@
 			files = (
 				3A3B62801D5AE6DC00B0E0E4 /* LaunchScreen.storyboard in Resources */,
 				3A3B627D1D5AE6DC00B0E0E4 /* Assets.xcassets in Resources */,
-				3A3B627B1D5AE6DC00B0E0E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +245,10 @@
 			files = (
 				3A3B62781D5AE6DC00B0E0E4 /* ViewController.swift in Sources */,
 				3A3B62B51D5AE7CC00B0E0E4 /* Validator.swift in Sources */,
+				3A3B62D01D5AFD9200B0E0E4 /* FormView.swift in Sources */,
+				3A3B62D21D5AFE4C00B0E0E4 /* FormFieldCell.swift in Sources */,
 				3A3B62761D5AE6DC00B0E0E4 /* AppDelegate.swift in Sources */,
+				3A3B62D41D5B033C00B0E0E4 /* FormTextField.swift in Sources */,
 				3A3B62B81D5AE81B00B0E0E4 /* FieldType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,14 +274,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3A3B62791D5AE6DC00B0E0E4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A3B627A1D5AE6DC00B0E0E4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3A3B627E1D5AE6DC00B0E0E4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
