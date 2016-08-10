@@ -12,13 +12,13 @@
 		3A3B627D1D5AE6DC00B0E0E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B627C1D5AE6DC00B0E0E4 /* Assets.xcassets */; };
 		3A3B62801D5AE6DC00B0E0E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3B627E1D5AE6DC00B0E0E4 /* LaunchScreen.storyboard */; };
 		3A3B62A31D5AE78200B0E0E4 /* FormNinja_ValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62A21D5AE78200B0E0E4 /* FormNinja_ValidationTests.swift */; };
-		3A3B62B51D5AE7CC00B0E0E4 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62B41D5AE7CC00B0E0E4 /* Validator.swift */; };
-		3A3B62B61D5AE7CC00B0E0E4 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62B41D5AE7CC00B0E0E4 /* Validator.swift */; };
-		3A3B62B81D5AE81B00B0E0E4 /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62B71D5AE81B00B0E0E4 /* FieldType.swift */; };
-		3A3B62B91D5AE81B00B0E0E4 /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62B71D5AE81B00B0E0E4 /* FieldType.swift */; };
-		3A3B62D01D5AFD9200B0E0E4 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62CF1D5AFD9200B0E0E4 /* FormView.swift */; };
-		3A3B62D21D5AFE4C00B0E0E4 /* FormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62D11D5AFE4C00B0E0E4 /* FormFieldCell.swift */; };
-		3A3B62D41D5B033C00B0E0E4 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62D31D5B033C00B0E0E4 /* FormTextField.swift */; };
+		3A3B62DF1D5B08D200B0E0E4 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62D81D5B08D200B0E0E4 /* FormView.swift */; };
+		3A3B62E01D5B08D200B0E0E4 /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62DA1D5B08D200B0E0E4 /* FieldType.swift */; };
+		3A3B62E11D5B08D200B0E0E4 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62DB1D5B08D200B0E0E4 /* Validator.swift */; };
+		3A3B62E21D5B08D200B0E0E4 /* FormFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62DD1D5B08D200B0E0E4 /* FormFieldCell.swift */; };
+		3A3B62E31D5B08D200B0E0E4 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62DE1D5B08D200B0E0E4 /* FormTextField.swift */; };
+		3A3B62E41D5B08DB00B0E0E4 /* FieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62DA1D5B08D200B0E0E4 /* FieldType.swift */; };
+		3A3B62E51D5B08DB00B0E0E4 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3B62DB1D5B08D200B0E0E4 /* Validator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +41,11 @@
 		3A3B62A01D5AE78200B0E0E4 /* FormNinja-ValidationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FormNinja-ValidationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A3B62A21D5AE78200B0E0E4 /* FormNinja_ValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormNinja_ValidationTests.swift; sourceTree = "<group>"; };
 		3A3B62A41D5AE78200B0E0E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A3B62B41D5AE7CC00B0E0E4 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		3A3B62B71D5AE81B00B0E0E4 /* FieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldType.swift; sourceTree = "<group>"; };
-		3A3B62CF1D5AFD9200B0E0E4 /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormView.swift; path = Validator/FormView.swift; sourceTree = "<group>"; };
-		3A3B62D11D5AFE4C00B0E0E4 /* FormFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormFieldCell.swift; path = Validator/FormFieldCell.swift; sourceTree = "<group>"; };
-		3A3B62D31D5B033C00B0E0E4 /* FormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormTextField.swift; path = ../../TestProjects/VenmoDemo/VenmoDemo/UI/CardEntry/Views/FormTextField.swift; sourceTree = "<group>"; };
+		3A3B62D81D5B08D200B0E0E4 /* FormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		3A3B62DA1D5B08D200B0E0E4 /* FieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldType.swift; sourceTree = "<group>"; };
+		3A3B62DB1D5B08D200B0E0E4 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		3A3B62DD1D5B08D200B0E0E4 /* FormFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormFieldCell.swift; sourceTree = "<group>"; };
+		3A3B62DE1D5B08D200B0E0E4 /* FormTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 		3A3B62691D5AE6DC00B0E0E4 = {
 			isa = PBXGroup;
 			children = (
-				3A3B62B21D5AE7CC00B0E0E4 /* Source */,
+				3A3B62D71D5B08D200B0E0E4 /* Source */,
 				3A3B62741D5AE6DC00B0E0E4 /* FormNinja-Demo */,
 				3A3B62A11D5AE78200B0E0E4 /* FormNinja-ValidationTests */,
 				3A3B62731D5AE6DC00B0E0E4 /* Products */,
@@ -104,26 +104,6 @@
 			path = "FormNinja-ValidationTests";
 			sourceTree = "<group>";
 		};
-		3A3B62B21D5AE7CC00B0E0E4 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				3A3B62CF1D5AFD9200B0E0E4 /* FormView.swift */,
-				3A3B62D61D5B05B000B0E0E4 /* Views */,
-				3A3B62B31D5AE7CC00B0E0E4 /* Validator */,
-			);
-			name = Source;
-			path = ../../Source;
-			sourceTree = "<group>";
-		};
-		3A3B62B31D5AE7CC00B0E0E4 /* Validator */ = {
-			isa = PBXGroup;
-			children = (
-				3A3B62B41D5AE7CC00B0E0E4 /* Validator.swift */,
-				3A3B62B71D5AE81B00B0E0E4 /* FieldType.swift */,
-			);
-			path = Validator;
-			sourceTree = "<group>";
-		};
 		3A3B62D51D5B04E800B0E0E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,13 +114,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3A3B62D61D5B05B000B0E0E4 /* Views */ = {
+		3A3B62D71D5B08D200B0E0E4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				3A3B62D11D5AFE4C00B0E0E4 /* FormFieldCell.swift */,
-				3A3B62D31D5B033C00B0E0E4 /* FormTextField.swift */,
+				3A3B62D81D5B08D200B0E0E4 /* FormView.swift */,
+				3A3B62D91D5B08D200B0E0E4 /* Validator */,
+				3A3B62DC1D5B08D200B0E0E4 /* Views */,
 			);
-			name = Views;
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+		3A3B62D91D5B08D200B0E0E4 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				3A3B62DA1D5B08D200B0E0E4 /* FieldType.swift */,
+				3A3B62DB1D5B08D200B0E0E4 /* Validator.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
+		3A3B62DC1D5B08D200B0E0E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A3B62DD1D5B08D200B0E0E4 /* FormFieldCell.swift */,
+				3A3B62DE1D5B08D200B0E0E4 /* FormTextField.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,13 +243,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A3B62E01D5B08D200B0E0E4 /* FieldType.swift in Sources */,
+				3A3B62DF1D5B08D200B0E0E4 /* FormView.swift in Sources */,
+				3A3B62E21D5B08D200B0E0E4 /* FormFieldCell.swift in Sources */,
+				3A3B62E31D5B08D200B0E0E4 /* FormTextField.swift in Sources */,
+				3A3B62E11D5B08D200B0E0E4 /* Validator.swift in Sources */,
 				3A3B62781D5AE6DC00B0E0E4 /* ViewController.swift in Sources */,
-				3A3B62B51D5AE7CC00B0E0E4 /* Validator.swift in Sources */,
-				3A3B62D01D5AFD9200B0E0E4 /* FormView.swift in Sources */,
-				3A3B62D21D5AFE4C00B0E0E4 /* FormFieldCell.swift in Sources */,
 				3A3B62761D5AE6DC00B0E0E4 /* AppDelegate.swift in Sources */,
-				3A3B62D41D5B033C00B0E0E4 /* FormTextField.swift in Sources */,
-				3A3B62B81D5AE81B00B0E0E4 /* FieldType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,9 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A3B62B61D5AE7CC00B0E0E4 /* Validator.swift in Sources */,
+				3A3B62E41D5B08DB00B0E0E4 /* FieldType.swift in Sources */,
+				3A3B62E51D5B08DB00B0E0E4 /* Validator.swift in Sources */,
 				3A3B62A31D5AE78200B0E0E4 /* FormNinja_ValidationTests.swift in Sources */,
-				3A3B62B91D5AE81B00B0E0E4 /* FieldType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,11 +5,28 @@
       location = "group:Source"
       name = "Source">
       <FileRef
-         location = "group:Validator/FieldType.swift">
+         location = "group:FormView.swift">
       </FileRef>
-      <FileRef
-         location = "group:Validator/Validator.swift">
-      </FileRef>
+      <Group
+         location = "group:Validator"
+         name = "Validator">
+         <FileRef
+            location = "group:FieldType.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Validator.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Views"
+         name = "Views">
+         <FileRef
+            location = "group:FormFieldCell.swift">
+         </FileRef>
+         <FileRef
+            location = "group:FormTextField.swift">
+         </FileRef>
+      </Group>
    </Group>
    <FileRef
       location = "group:FormNinja/FormNinja/FormNinja.xcodeproj">
