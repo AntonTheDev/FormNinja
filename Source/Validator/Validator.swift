@@ -1,9 +1,9 @@
 //
 //  Validator.swift
-//  
+//  FormNinja
 //
-//  Created by Anton on 8/9/16.
-//
+//  Created by Anton Doudarev on 8/8/16.
+//  Copyright © 2016 Anton Doudarev. All rights reserved.
 //
 
 import Foundation

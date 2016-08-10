@@ -1,6 +1,6 @@
 //
 //  FormEntryTextField.swift
-//  FormNinja-Demo
+//  FormNinja
 //
 //  Created by Anton Doudarev on 8/8/16.
 //  Copyright © 2016 Anton Doudarev. All rights reserved.

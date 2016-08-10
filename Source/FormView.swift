@@ -1,8 +1,8 @@
 //
 //  FormNinjaView.swift
-//  FormNinja-Demo
+//  FormNinja
 //
-//  Created by Anton on 8/9/16.
+//  Created by Anton Doudarev on 8/8/16.
 //  Copyright © 2016 Anton Doudarev. All rights reserved.
 //
 
@@ -12,7 +12,6 @@ import UIKit
 protocol FormViewDataSource : class {
     func fieldTypesFormView(formView: FormView) -> [FieldType]
     func formView(formView: FormView, sizeForForFieldType type : FieldType) -> CGSize
-
 }
 
 class FormView: UIView {
@@ -21,7 +20,7 @@ class FormView: UIView {
     
     var typingAttributes : Dictionary<String , AnyObject>?
     var placeHolderAttributes : Dictionary<String , AnyObject>?
-    
+    /*
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(formCollectionView)
@@ -36,7 +35,7 @@ class FormView: UIView {
         super.layoutSubviews()
         formCollectionView.frame = self.bounds
     }
-    
+    */
     //MARK: Lazy loaded views
     
     lazy var formCollectionView : UICollectionView = {
@@ -45,6 +44,7 @@ class FormView: UIView {
         let flowLayout  = UICollectionViewFlowLayout()
         flowLayout.minimumInteritemSpacing = 0.0
         flowLayout.minimumLineSpacing = 0.0
+        
         var collectionView : UICollectionView = UICollectionView(frame: CGRectZero, collectionViewLayout : flowLayout)
         collectionView.clipsToBounds = true
         collectionView.backgroundColor = UIColor.clearColor()
@@ -83,12 +83,8 @@ extension FormView : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("FormFieldCell", forIndexPath: indexPath) as! FormFieldCell
+        cell.fieldType = dataSource?.fieldTypesFormView(self)[indexPath.row]
         
-       //  cell.dataSource = self
-       //  cell.delegate = self
-       //  cell.fieldType = FormFieldType(rawValue : indexPath.row)!
-        
-       //  prepareCellForAnimation(cell)
         return cell
     }
 }
