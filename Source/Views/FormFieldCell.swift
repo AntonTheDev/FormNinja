@@ -27,13 +27,6 @@ struct FormEntryTextFieldConfig {
 }
 
 protocol FormFieldCellDelegate : class {
-    
-    func formCell(formCellTappedNext cell: FormFieldCell)
-    
-    func formCell(formCellTappedPrevious cell: FormFieldCell)
-
-    func formCell(formCellTappedDone cell: FormFieldCell)
-
     func formCell(formCell: FormFieldCell,
                   didChangeValue newValue: String?)
 
@@ -47,17 +40,12 @@ protocol FormFieldCellDelegate : class {
 
 class FormFieldCell : UICollectionViewCell {
     
-    weak var delegate    : FormFieldCellDelegate?
+    var fieldType : FieldType?
     
-    var fieldType   : FieldType?
+    weak var delegate : FormFieldCellDelegate?
 
-    var barButtonItems : [UIBarButtonItem] = [UIBarButtonItem]()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        layer.borderWidth = 1.0
-        self.backgroundColor = UIColor.yellowColor()
-        layer.borderColor = UIColor.blackColor().CGColor
         setupInterface()
     }
     
@@ -72,21 +60,7 @@ class FormFieldCell : UICollectionViewCell {
         super.layoutSubviews()
         layoutInterface()
     }
-    
-    // MARK: - Tap Actions
-    
-    func tappedDone() {
-        delegate?.formCell(formCellTappedDone: self)
-    }
-    
-    func tappedPrevious() {
-        delegate?.formCell(formCellTappedPrevious: self)
-    }
-    
-    func tappedNext() {
-        delegate?.formCell(formCellTappedNext: self)
-    }
-    
+
     // MARK: - LazyLoaded Views
     
     lazy var logoImageView : UIImageView = {
@@ -95,17 +69,11 @@ class FormFieldCell : UICollectionViewCell {
         imageView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         return imageView
     }()
-    
-    lazy var numberToolbar : UIToolbar = {
-        let toolbar = UIToolbar()
-        toolbar.barStyle = UIBarStyle.Default
-        self.entryField.inputAccessoryView = toolbar
-        return toolbar
-    }()
-    
+
     lazy var entryField : FormEntryTextField = {
         [unowned self] in
         let textField = FormEntryTextField(frame: CGRectZero)
+        textField.backgroundColor = UIColor.darkGrayColor()
         textField.delegate = self
         textField.addTarget(self, action: #selector(FormFieldCell.textFieldDidChange(_:)),
                             forControlEvents: UIControlEvents.EditingChanged)
@@ -139,12 +107,18 @@ extension FormFieldCell {
         let entryFieldSize = CGSizeMake(textFiedWidth, 40.0)
         */
         entryField.frame = contentView.bounds
-        
     }
     
     func updateConfiguration() {
 
     }
+}
+
+func CGCSRectEdgeInset(inputFrame : CGRect, edgeInsets : UIEdgeInsets) -> CGRect {
+    var retval :CGRect  = CGRectMake(inputFrame.origin.x + edgeInsets.left, inputFrame.origin.y + edgeInsets.top, 0, 0)
+    retval.size.width = CGRectGetWidth(inputFrame) - (edgeInsets.left + edgeInsets.right)
+    retval.size.height = CGRectGetHeight(inputFrame) - (edgeInsets.top + edgeInsets.bottom)
+    return retval
 }
 
 // MARK: - UITextFieldDelegate
@@ -163,10 +137,15 @@ extension FormFieldCell : UITextFieldDelegate {
         return false
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textField(textField: UITextField,
+                   shouldChangeCharactersInRange range: NSRange,
+                   replacementString string: String) -> Bool {
         
         if let delegate = delegate {
-            return delegate.formCell(self, shouldChangeCharactersInRange: range, currentValue: textField.text, replacementString: string)
+            return delegate.formCell(self,
+                                     shouldChangeCharactersInRange: range,
+                                     currentValue: textField.text,
+                                     replacementString: string)
         }
         
         return true

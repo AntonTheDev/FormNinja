@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 /**
  *  FormEntryTextField 
  *  Custom Textfield with separator

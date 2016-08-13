@@ -22,10 +22,11 @@ class ViewController: UIViewController {
     
     func setupInterface() {
         view.addSubview(formView)
+        view.backgroundColor = UIColor.lightGrayColor()
     }
     
     func layoutInterface() {
-        formView.frame = view.bounds
+        formView.frame = CGRectMake(0, 40, view.bounds.width, view.bounds.height - 40.0)
     }
 
     //MARK: Lazy loaded views
@@ -43,6 +44,28 @@ extension ViewController : FormViewDataSource {
     
     func fieldTypesFormView(formView: FormView) -> [FieldType] {
         return [.firstName, .middleInitial, .lastName]
+    }
+
+    func formView(formView: FormView, sizeForFormField type : FieldType) -> CGSize {
+        switch type {
+        case .lastName:
+            return CGSizeMake(formView.bounds.width, 60)
+        default:
+            return CGSizeMake(formView.bounds.width / 2.0, 60)
+        }
+    }
+    
+    func formView(formView: FormView, placeHolderForFormField type : FieldType) -> String {
+        switch type {
+        case .firstName:
+            return "First Name"
+        case .middleInitial:
+            return "Mmiddle Initial"
+        case .lastName:
+            return "Last Name"
+        default :
+            return ""
+        }
     }
     
     func formView(formView: FormView, sizeForForFieldType type : FieldType) -> CGSize {

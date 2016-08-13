@@ -11,7 +11,12 @@ import UIKit
 
 protocol FormViewDataSource : class {
     func fieldTypesFormView(formView: FormView) -> [FieldType]
-    func formView(formView: FormView, sizeForForFieldType type : FieldType) -> CGSize
+    func formView(formView: FormView, sizeForFormField type : FieldType) -> CGSize
+    func formView(formView: FormView, placeHolderForFormField type : FieldType) -> String
+}
+
+protocol FormViewDelegate : class {
+    func fieldTypesFormView(formView: FormView) -> [FieldType : Any]
 }
 
 class FormView: UIView {
@@ -20,22 +25,17 @@ class FormView: UIView {
     
     var typingAttributes : Dictionary<String , AnyObject>?
     var placeHolderAttributes : Dictionary<String , AnyObject>?
-    /*
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addSubview(formCollectionView)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        addSubview(formCollectionView)
-    }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        if formCollectionView.superview == nil {
+            addSubview(formCollectionView)
+        }
+        
         formCollectionView.frame = self.bounds
     }
-    */
+
     //MARK: Lazy loaded views
     
     lazy var formCollectionView : UICollectionView = {
@@ -77,14 +77,19 @@ extension FormView : UICollectionViewDelegate, UICollectionViewDataSource {
         }
         
         let fieldType = dataSource.fieldTypesFormView(self)[indexPath.row]
-        return  dataSource.formView(self, sizeForForFieldType: fieldType)
+       
+        return  dataSource.formView(self, sizeForFormField: fieldType)
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("FormFieldCell", forIndexPath: indexPath) as! FormFieldCell
-        cell.fieldType = dataSource?.fieldTypesFormView(self)[indexPath.row]
         
+        let fieldType = dataSource?.fieldTypesFormView(self)[indexPath.row]
+        
+        cell.fieldType = fieldType
+        cell.entryField.placeholder = dataSource?.formView(self, placeHolderForFormField: fieldType!)
+       
         return cell
     }
 }
